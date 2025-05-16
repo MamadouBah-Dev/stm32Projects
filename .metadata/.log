@@ -123,3 +123,21 @@ java.lang.NullPointerException: Cannot invoke "com.st.stm32cube.common.mx.target
 
 !ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 0 2025-05-12 23:09:06.834
 !MESSAGE Won't launch debug session since we failed to locate the binary.
+!SESSION 2025-05-16 10:15:57.142 -----------------------------------------------
+eclipse.buildId=Version 1.18.1
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2025-05-16 10:16:38.858
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-05-16 10:16:47.753
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-05-16 10:16:47.756
+!MESSAGE Log4j2 initialized with config file C:\Users\lamsl\stm32Projects\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-05-16 10:17:04.617
+!MESSAGE Started RMI Server, listening on port 41337
