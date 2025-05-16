@@ -1,4 +1,4 @@
-23:58:46 **** Incremental Build of configuration Debug for project bluepill_blink ****
+10:41:11 **** Incremental Build of configuration Debug for project bluepill_blink ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'main':
@@ -19,11 +19,11 @@ Finished building target: bluepill_blink.elf
 arm-none-eabi-size  bluepill_blink.elf 
 arm-none-eabi-objdump -h -S bluepill_blink.elf  > "bluepill_blink.list"
    text	   data	    bss	    dec	    hex	filename
-  11296	    104	   1976	  13376	   3440	bluepill_blink.elf
+  11028	    104	   1976	  13108	   3334	bluepill_blink.elf
 Finished building: default.size.stdout
  
 Finished building: bluepill_blink.list
  
 
-23:58:48 Build Finished. 0 errors, 2 warnings. (took 2s.14ms)
+10:41:12 Build Finished. 0 errors, 2 warnings. (took 1s.249ms)
 

@@ -1,47 +1,46 @@
-23:34:33 **** Incremental Build of configuration Debug for project bluepill_blink ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "bluepill_blink.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\lamsl\stm32Projects\bluepill_blink\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="bluepill_blink.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: bluepill_blink.elf
- 
-arm-none-eabi-size  bluepill_blink.elf 
-arm-none-eabi-objdump -h -S bluepill_blink.elf  > "bluepill_blink.list"
-   text	   data	    bss	    dec	    hex	filename
-   8612	     12	   1644	  10268	   281c	bluepill_blink.elf
-Finished building: default.size.stdout
- 
-Finished building: bluepill_blink.list
- 
-23:34:42 **** Incremental Build of configuration Debug for project bluepill_blink ****
-make -j8 all 
-arm-none-eabi-size  bluepill_blink.elf 
-   text	   data	    bss	    dec	    hex	filename
-   8612	     12	   1644	  10268	   281c	bluepill_blink.elf
-Finished building: default.size.stdout
- 
-23:58:46 **** Incremental Build of configuration Debug for project bluepill_blink ****
+11:32:00 **** Incremental Build of configuration Debug for project bluepill_blink2 ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:99:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
-   99 |   printf("First application starting\n");
-      |   ^~~~~~
-../Core/Src/main.c:21:1: note: include '<stdio.h>' or provide a declaration of 'printf'
-   20 | #include "main.h"
-  +++ |+#include <stdio.h>
-   21 | 
-../Core/Src/main.c:99:3: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
-   99 |   printf("First application starting\n");
-      |   ^~~~~~
-../Core/Src/main.c:99:3: note: include '<stdio.h>' or provide a declaration of 'printf'
-arm-none-eabi-gcc -o "bluepill_blink.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\lamsl\stm32Projects\bluepill_blink\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="bluepill_blink.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: bluepill_blink.elf
+../Core/Src/main.c:103:21: error: 'last_blink' undeclared (first use in this function)
+  103 |           if (now - last_blink >= 500){
+      |                     ^~~~~~~~~~
+../Core/Src/main.c:103:21: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:104:38: error: 'LED_GPIO_PORT' undeclared (first use in this function); did you mean 'LED_GPIO_Port'?
+  104 |                   HAL_GPIO_TogglePin(LED_GPIO_PORT, LED_Pin);
+      |                                      ^~~~~~~~~~~~~
+      |                                      LED_GPIO_Port
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:01:51 **** Incremental Build of configuration Debug for project bluepill_blink2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:101:30: error: 'LED_GPIO_PORT' undeclared (first use in this function); did you mean 'LED_GPIO_Port'?
+  101 |           HAL_GPIO_TogglePin(LED_GPIO_PORT, LED_Pin);
+      |                              ^~~~~~~~~~~~~
+      |                              LED_GPIO_Port
+../Core/Src/main.c:101:30: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:03:20 **** Incremental Build of configuration Debug for project bluepill_blink2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "bluepill_blink2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\lamsl\stm32Projects\bluepill_blink2\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="bluepill_blink2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: bluepill_blink2.elf
  
-arm-none-eabi-size  bluepill_blink.elf 
-arm-none-eabi-objdump -h -S bluepill_blink.elf  > "bluepill_blink.list"
+arm-none-eabi-size  bluepill_blink2.elf 
+arm-none-eabi-objdump -h -S bluepill_blink2.elf  > "bluepill_blink2.list"
    text	   data	    bss	    dec	    hex	filename
-  11296	    104	   1976	  13376	   3440	bluepill_blink.elf
+   8612	     12	   1644	  10268	   281c	bluepill_blink2.elf
 Finished building: default.size.stdout
  
-Finished building: bluepill_blink.list
+Finished building: bluepill_blink2.list
+ 
+15:04:00 **** Incremental Build of configuration Debug for project bluepill_blink2 ****
+make -j8 all 
+arm-none-eabi-size  bluepill_blink2.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8612	     12	   1644	  10268	   281c	bluepill_blink2.elf
+Finished building: default.size.stdout
  
